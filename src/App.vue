@@ -28,6 +28,7 @@ export default {
 }
 #app{
   background-color: #1E1E1E;
+  display: flex;
 }
 
 </style>
