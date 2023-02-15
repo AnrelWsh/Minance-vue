@@ -1,17 +1,20 @@
 <template>
   <div id="app">
 
+    <MenuVue/>
+    <CentralVue/>
   </div>
-  <Menu/>
 </template>
 
 <script>
-import Menu from './components/Menu.vue'
+import MenuVue from './components/MenuVue.vue'
+import CentralVue from './components/CentralVue.vue'
 
 export default {
   name: 'App',
   components: {
-    Menu
+    MenuVue,
+    CentralVue,
   }
 }
 </script>
@@ -21,6 +24,7 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins';
 }
 #app{
   background-color: #1E1E1E;
