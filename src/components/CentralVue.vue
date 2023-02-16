@@ -25,19 +25,26 @@
 
     <img src="../../public/img/chart.png" alt="Chart" class="chart">
 
-    <div class="sectitle">
-      <p></p>
-      <p></p>
+    <div class="second">
+      <div class="sectitle">
+        <p class="sectitleOne">Recent Transactions </p>
+        <p class="sectitleTwo">See all coins</p>
+      </div>
+      <TransactionComponent coinImage="img/cryptos/btc-mt.png" cryptoName="Bitcoin" coinName="BTC" lineImage="img/line1.png"/>
+      <TransactionComponent coinImage="img/cryptos/eth-white.png" cryptoName="Etherum" coinName="ETH" lineImage="img/line2.png"/>
     </div>
+    
   </div>
     
 </template>
 
 <script>
+import TransactionComponent from './TransactionComponent.vue';
 
 export default {
-  name: 'MenuVue',
+  name: 'CentralVue',
   components: {
+    TransactionComponent,
   },
   
 }
@@ -112,5 +119,19 @@ h2{
 }
 .chart{
   padding: 42px 0 21px 0;
+}
+.sectitle{
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 33px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.sectitleOne{
+  color: #FFFFFF;
+}
+.sectitleTwo{
+  color: rgba(255, 255, 255, 0.7);
 }
 </style>
