@@ -62,6 +62,7 @@ export default {
     padding: 18px 30px;
 }
 p{
+    font-family: "Inter";
     font-size: 17px;
     line-height: 21px;
     color: #FFFFFF;

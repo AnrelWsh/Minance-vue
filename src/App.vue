@@ -31,6 +31,7 @@ export default {
 #app{
   background-color: #1E1E1E;
   display: flex;
+  padding: 24px 13px 24px 16px;
 }
 
 </style>
