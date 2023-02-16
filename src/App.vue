@@ -1,20 +1,22 @@
 <template>
   <div id="app">
-
     <MenuVue/>
     <CentralVue/>
+    <SideVue/>
   </div>
 </template>
 
 <script>
 import MenuVue from './components/MenuVue.vue'
 import CentralVue from './components/CentralVue.vue'
+import SideVue from './components/SideVue.vue'
 
 export default {
   name: 'App',
   components: {
     MenuVue,
     CentralVue,
+    SideVue,
   }
 }
 </script>

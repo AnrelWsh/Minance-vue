@@ -30,8 +30,8 @@
         <p class="sectitleOne">Recent Transactions </p>
         <p class="sectitleTwo">See all coins</p>
       </div>
-      <TransactionComponent coinImage="img/cryptos/btc-mt.png" cryptoName="Bitcoin" coinName="BTC" lineImage="img/line1.png"/>
-      <TransactionComponent coinImage="img/cryptos/eth-white.png" cryptoName="Etherum" coinName="ETH" lineImage="img/line2.png"/>
+      <TransactionComponent coinImage="img/cryptos/btc-mt.png" cryptoName="Bitcoin" coinName="BTC" marketColor="rgba(25, 112, 214, 1)" changeColor="rgba(74, 214, 25, 1)" lineImage="img/line1.png"/>
+      <TransactionComponent coinImage="img/cryptos/eth-white.png" cryptoName="Etherum" coinName="ETH" marketColor="rgba(108, 17, 130, 1)" changeColor="rgba(214, 25, 25, 1)" lineImage="img/line2.png"/>
     </div>
     
   </div>
@@ -64,6 +64,7 @@ input{
 .head{
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 h2{
   color: white;
@@ -116,9 +117,11 @@ h2{
   display: flex;
   align-items: center;
   gap: 90px;
+  padding-left: 18px;
 }
 .chart{
   padding: 42px 0 21px 0;
+  margin: auto;
 }
 .sectitle{
   font-weight: 700;
@@ -127,11 +130,15 @@ h2{
   text-align: center;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .sectitleOne{
   color: #FFFFFF;
 }
 .sectitleTwo{
   color: rgba(255, 255, 255, 0.7);
+}
+.second{
+  padding: 0 18px;
 }
 </style>
