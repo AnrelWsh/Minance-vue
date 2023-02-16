@@ -13,7 +13,7 @@
             <p>24h change</p>
             <p class="changeValue" :style="{color: changeColor}">+1,56</p>
         </div>
-        <img :src="lineImage" alt="Line">
+        <img :src="lineImage" alt="Line" id="line">
         <p class="trade">Trade</p>
     </div>
 </template>
@@ -56,7 +56,7 @@ export default {
 .transac{
     display:flex;
     align-items: center;
-    gap: 85px;
+    gap: 48px;
     background: rgba(32, 35, 43, 0.7);
     border-radius: 30px;
     padding: 18px 30px;
@@ -69,7 +69,10 @@ p{
     opacity: 0.95;
 }
 .name{
-    width: 4.5rem;
+    width: 55px;
+}
+.market p, .change p{
+    width: max-content;
 }
 .marketValue, .changeValue{
     font-weight: 600;
@@ -84,5 +87,7 @@ p{
     border-radius: 30px;
     padding: 6px 18px;
 }
-
+#line{
+    width: 112px;
+}
 </style>

@@ -51,6 +51,15 @@ export default {
 </script>
 
 <style scoped>
+#central{ 
+  margin-left: 30px;
+  margin-right: 15px;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
 input{
   padding: 15px 73px;
   background-image:url(../../public/img/icons/search.png);
@@ -65,6 +74,7 @@ input{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 h2{
   color: white;
@@ -105,7 +115,7 @@ h2{
   font-size: 22px;
   line-height: 33px;
   color: #FFFFFF;
-  padding: 17px 22px;
+  padding: 16px;
 }
 .subtab .active{
   background: #0D0C0C;
@@ -116,12 +126,12 @@ h2{
 .sub{
   display: flex;
   align-items: center;
-  gap: 90px;
-  padding-left: 18px;
+  gap: 32px;
+  width: 100%;
+  padding-left: 12px;
 }
 .chart{
-  padding: 42px 0 21px 0;
-  margin: auto;
+  width: 50vw;
 }
 .sectitle{
   font-weight: 700;
@@ -131,6 +141,7 @@ h2{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 .sectitleOne{
   color: #FFFFFF;

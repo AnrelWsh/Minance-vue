@@ -71,7 +71,7 @@ p{
 .txt{
     display: flex;
     align-items: center;
-    gap: 44px;
+    gap: 20px;
     margin-left: 28px;
     width: 300px;
 }

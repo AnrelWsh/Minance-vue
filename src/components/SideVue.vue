@@ -40,10 +40,15 @@ export default {
 </script>
 
 <style scoped>
+#side{
+  padding-left: 15px;
+  width: 26vw;
+}
 .up{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 90px;
 }
 h2{
   font-weight: 700;
