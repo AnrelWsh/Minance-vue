@@ -1,9 +1,7 @@
 <template>
   <div id="app">
-    <div class="subapp">
-      <MenuVue/>
-      <CentralVue/>
-    </div>
+    <MenuVue/>
+    <CentralVue/>
     <SideVue/>
   </div>
 </template>
@@ -35,9 +33,6 @@ export default {
   display: flex;
   flex-direction: row;
   padding: 24px 13px 24px 16px;
-}
-.subapp{
-  display: flex;
 }
 
 @media screen and (max-width: 1024px) {

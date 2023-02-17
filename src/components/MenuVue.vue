@@ -1,18 +1,22 @@
 <template>
-  <div id="menu">
-    <div class="burger">
-			<div class="line"></div>
-			<div class="line"></div>
-			<div class="line"></div>
-		</div>
-    <div class="first">
+  <div class="respMenu">
+    <div class="burger" @click="toggleNav">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <img id="respLogo" src="../../public/img/Logo.png" alt="Logo">
+  </div>
+
+  <div id="menu" :class="{ 'nav-active': isNavOpen }">
+
       <img id="logo" src="../../public/img/Logo.png" alt="Logo">
 
       <div class="up">
         <UpSideComponent/>
       </div>
    
-      <div class="mid">
+      <div class="mid" >
         <div class="dash">
           <img src="../../public/img/icons/dashboard.png" alt="dashboard">
           <p>Dashboard</p>
@@ -27,12 +31,11 @@
           <MenuBtnComponent imageUrl="img/icons/help.png" btnText="Help"/>
         </div>
       </div>
-    </div> 
 
-    <div class="logout">
-      <img src="../../public/img/icons/logout.png" alt="Menu Button Logout">
-      <p>Log Out</p>
-    </div>
+      <div class="logout">
+        <img src="../../public/img/icons/logout.png" alt="Menu Button Logout">
+        <p>Log Out</p>
+      </div>
   </div>
     
 </template>
@@ -47,6 +50,17 @@ export default {
     MenuBtnComponent,
     UpSideComponent
   },
+
+  data() {
+    return {
+      isNavOpen: false
+    }
+  },
+  methods: {
+    toggleNav() {
+      this.isNavOpen = !this.isNavOpen;
+    }
+  }
   
   
 }
@@ -93,7 +107,12 @@ export default {
 .up{
   display: none;
 }
-
+.respMenu{
+  display: none;
+}
+.mid{
+  transform: translateY(-150px);
+}
 
 .burger {
 	display: none;
@@ -105,24 +124,39 @@ export default {
 	background-color: #fff;
 	margin: 5px;
 }
+.nav-active {
+  display: none;
+}
 @media screen and (max-width: 1024px) {
-	.first, .logout {
+  #menu{
+    display: none;
+  }
+  #logo{
+    display: none;
+  }
+  .mid{
+    transform: none;
+  }
+	.nav-active {
+    z-index: 1;
 		position: fixed;
-		right: 0px;
-		height: 92vh;
-		top: 8vh;
+    padding: 24px;
+		top: 0;
+    right: 0;
+    overflow-y: auto;
 		background-color: #2f3640;
-		display: flex;
+		display: flex !important;
 		flex-direction: column;
 		align-items: center;
-		width: 50%;
-		transform: translateX(100%);
 		transition: transform 0.5s ease-in;
 	}
 	.burger {
 		display: block;
 	}
   .up{
+    display: flex;
+  }
+  .respMenu{
     display: flex;
   }
 }
