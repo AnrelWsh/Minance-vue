@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <MenuVue/>
-    <CentralVue/>
+    <div class="subapp">
+      <MenuVue/>
+      <CentralVue/>
+    </div>
     <SideVue/>
   </div>
 </template>
@@ -31,7 +33,16 @@ export default {
 #app{
   background-color: #1E1E1E;
   display: flex;
+  flex-direction: row;
   padding: 24px 13px 24px 16px;
 }
+.subapp{
+  display: flex;
+}
 
+@media screen and (max-width: 1024px) {
+  #app{
+    flex-direction: column;
+  }
+}
 </style>

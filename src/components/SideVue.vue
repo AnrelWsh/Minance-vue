@@ -1,8 +1,7 @@
 <template>
   <div id="side">
     <div class="up">
-      <img src="../../public/img/icons/notif.png" alt="Notif icon">
-      <img src="../../public/img/icons/profil.png" alt="Profil Icon">
+      <UpSideComponent/>
     </div>
 
     <div class="recent">
@@ -26,12 +25,14 @@
 </template>
 
 <script>
+import UpSideComponent from './UpSideComponent.vue';
 import RecentTransactionComponent from './RecentTransactionComponent.vue';
 import AssetsComponent from './AssetsComponent.vue';
 
 export default {
   name: 'SideVue',
   components: {
+    UpSideComponent,
     RecentTransactionComponent,
     AssetsComponent,
   },
@@ -43,12 +44,12 @@ export default {
 #side{
   padding-left: 15px;
   width: 26vw;
-}
-.up{
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 90px;
+  flex-direction: column;
+}
+
+.recent{
+  margin-bottom: 20px;
 }
 h2{
   font-weight: 700;
@@ -59,5 +60,15 @@ h2{
 }
 .assetsTitle{
   margin-bottom: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+  .up{
+    display: none;
+  }
+  #side{
+    display: flex;
+    flex-direction: row;
+  }
 }
 </style>

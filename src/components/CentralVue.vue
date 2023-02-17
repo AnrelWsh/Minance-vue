@@ -152,4 +152,14 @@ h2{
 .second{
   padding: 0 18px;
 }
+
+
+@media screen and (max-width: 1024px) {
+  #central{
+    width: 80vw;
+  }
+  .chart{
+    width: 70vw;
+  }
+}
 </style>
