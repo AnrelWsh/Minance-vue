@@ -52,13 +52,12 @@ export default {
 
 <style scoped>
 #central{ 
-  margin-left: 30px;
-  margin-right: 15px;
   width: 50vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  margin: 6vw 0;
 }
 input{
   padding: 15px 73px;
@@ -151,15 +150,90 @@ h2{
 }
 .second{
   padding: 0 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 3vw;
 }
 
+@media screen and (max-width: 1481px) {
+  #central{
+    width: 70vw;
+  }
+  .sub{
+    margin: 3vw 0;
+  }
+  .second{
+    margin-top: 3vw;
+  }
+}
+
+@media screen and (max-width: 1281px) {
+  #central{
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 1124px) {
+  .head{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .head h2{
+    margin-bottom: 1vw;
+  }
+  .sub{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .subtab{
+    margin: auto;
+  }
+}
 
 @media screen and (max-width: 1024px) {
   #central{
-    width: 80vw;
+    width: 90vw;
+  }
+  .head{
+    flex-direction: row;
+    align-items: center;
+  }
+  .head h2{
+    margin-bottom: 0;
+  }
+  .sub{
+    margin: 3vw 0;
+    flex-direction: row;
+    align-items: center;
   }
   .chart{
     width: 70vw;
+  }
+  .second{
+    margin-top: 6vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .head{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .head h2{
+    margin-bottom: 1vw;
+  }
+  .sub{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .subtab{
+    margin: auto;
+  }
+  .chart{
+    width: 90vw;
+  }
+  .second{
+    width: 90vw;
   }
 }
 </style>

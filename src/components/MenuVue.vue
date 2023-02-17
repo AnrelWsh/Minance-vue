@@ -8,6 +8,8 @@
     <img id="respLogo" src="../../public/img/Logo.png" alt="Logo">
   </div>
 
+  <div class="screen" @click="toggleNav"></div>
+
   <div id="menu" :class="{ 'nav-active': isNavOpen }">
 
       <img id="logo" src="../../public/img/Logo.png" alt="Logo">
@@ -59,8 +61,26 @@ export default {
   methods: {
     toggleNav() {
       this.isNavOpen = !this.isNavOpen;
+      this.display = "none";
     }
-  }
+  },
+  mounted(){
+    const burger = document.querySelector('.burger');
+    const screen = document.querySelector('.screen');
+    const respMenu = document.querySelector('.respMenu');
+
+    burger.addEventListener('click', () => {
+      screen.style.display = 'block';
+      burger.style.display = 'none';
+      respMenu.style.transition = '0.5s ease-in';
+    });
+
+    screen.addEventListener('click', () => {
+      screen.style.display = 'none';
+      burger.style.display = 'block';
+      respMenu.style.transition = '0.5s ease-in';
+    });
+  },
   
   
 }
@@ -75,6 +95,9 @@ export default {
 }
 #logo{
   margin-bottom: 76px;
+}
+.screen{
+  display: none;
 }
 .dash{
   padding: 10px 29px;
@@ -91,6 +114,7 @@ export default {
   flex-direction: column;
   margin-left: 24px;
 }
+
 .logout {
   display: flex;
   align-items: center;
@@ -127,9 +151,21 @@ export default {
 .nav-active {
   display: none;
 }
+
+@media screen and (max-width: 1481px) {
+  #menu{
+    justify-content: flex-start;
+    margin-right: 5vw;
+  }
+  .mid{
+    margin-top: 10vw;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   #menu{
     display: none;
+    margin: 0;
   }
   #logo{
     display: none;
@@ -148,16 +184,30 @@ export default {
 		display: flex !important;
 		flex-direction: column;
 		align-items: center;
-		transition: transform 0.5s ease-in;
+		transition: 0.5s ease-in;
 	}
 	.burger {
 		display: block;
 	}
   .up{
     display: flex;
+    margin-bottom: 16px;
+    width: 25vw;
   }
   .respMenu{
     display: flex;
+    align-items: center;
+    gap: 20px;
+    transform: translateX(-100px);
+    transform: translateY(+20px);
+    transition: 0.5s ease-in;
+  }
+
+  .screen{
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000062;
+    position: fixed;
   }
 }
 </style>

@@ -1,8 +1,11 @@
 <template>
   <div id="app">
     <MenuVue/>
-    <CentralVue/>
-    <SideVue/>
+    <div class="content">
+      <CentralVue/>
+      <SideVue/>
+    </div>
+    
   </div>
 </template>
 
@@ -34,10 +37,23 @@ export default {
   flex-direction: row;
   padding: 24px 13px 24px 16px;
 }
+.content{
+  display: flex;
+}
+
+@media screen and (max-width: 1481px) {
+  .content{
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 @media screen and (max-width: 1024px) {
   #app{
     flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: auto;
   }
 }
 </style>

@@ -88,6 +88,13 @@ p{
     padding: 6px 18px;
 }
 #line{
-    width: 112px;
+    width: 7vw;
+}
+
+@media screen and (max-width: 800px) {
+    .transac{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 </style>
